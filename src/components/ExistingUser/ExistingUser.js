@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
-import { Button, Form, Input } from 'semantic-ui-react'
+import { Button, Form } from 'semantic-ui-react'
 import './ExistingUser.css'
 
 class ExistingUser extends Component {
-
-  constructor (props) {
-    super(props)
-  }
-
+  
   render  = () => {
 
     let options = [

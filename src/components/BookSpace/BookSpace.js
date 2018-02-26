@@ -40,13 +40,6 @@ class BookSpace extends Component {
   render  = () => {
     const { activeItem } = this.state
 
-    let options = [
-       { key: '1', text: 'Social media', value: 'Social media' },
-       { key: '2', text: 'Word of mouth', value: 'Word of mouth' },
-       { key: '3', text: 'Internet search', value: 'Internet search' },
-       { key: '4', text: 'Making my way downtown', value: 'Making my way downtown' },
-    ]
-
     return (
       <div>
       {

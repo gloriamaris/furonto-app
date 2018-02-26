@@ -4,10 +4,6 @@ import './NewUser.css'
 
 class NewUser extends Component {
 
-  constructor (props) {
-    super(props)
-  }
-
   render  = () => {
 
     let options = [
