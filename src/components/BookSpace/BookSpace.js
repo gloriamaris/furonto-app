@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Divider } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 import ExistingUser from '../ExistingUser/ExistingUser'
 import NewUser from '../NewUser/NewUser'
 

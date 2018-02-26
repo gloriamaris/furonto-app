@@ -28,7 +28,7 @@ class Home extends Component {
           <Container>
             <Image as='img' src='/furonto-logo.png' size='small' centered/>
             <Divider />
-            <Header as='h5' color='olive' textAlign='center'>Manage your coworking space hassle-free.</Header>
+            <Header as='h6' color='olive' textAlign='center'>Manage your coworking space<br/>hassle-free.</Header>
             <Button.Group size='large' widths={2}>
               <Button basic color='grey' positive={(activeItem === 'Book a space')} onClick={this.handleItemClick}>Book a space</Button>
               <Button.Or/>
