@@ -1,6 +1,14 @@
+/**
+ * Project Name: Furonto App
+ *
+ * @author Monique Dingding <monique.dingding@gmail.com>
+ * Created on February 27, 2018
+ */
+
 import React, { Component } from 'react'
 import { Button, Segment, Image, Container, Divider, Header } from 'semantic-ui-react'
 import BookSpace from '../BookSpace/BookSpace'
+import CheckOut from '../CheckOut/CheckOut'
 import './Home.css'
 
 class Home extends Component {
@@ -16,7 +24,7 @@ class Home extends Component {
   }
 
   renderForm = (activeItem) => {
-    return (activeItem === 'Book a space')? <BookSpace />: ''
+    return (activeItem === 'Book a space')? <BookSpace />: <CheckOut />
   }
 
   render  = () => {
@@ -42,7 +50,7 @@ class Home extends Component {
             </Segment>
           </Container>
         </Segment>
-      </div> 
+      </div>
     )
 
   }

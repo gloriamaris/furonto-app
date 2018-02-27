@@ -1,6 +1,13 @@
+/**
+ * Project Name: Furonto App
+ *
+ * @author Monique Dingding <monique.dingding@gmail.com>
+ * Created on February 27, 2018
+ */
+
 import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react'
-import ExistingUser from '../ExistingUser/ExistingUser'
+import ExistingClient from '../ExistingClient/ExistingClient'
 import NewUser from '../NewUser/NewUser'
 
 import './BookSpace.css'
@@ -23,17 +30,17 @@ class BookSpace extends Component {
       return this.renderPage()
     }
 
-    return (activeItem === 'Existing User')? <ExistingUser />: <NewUser />
+    return (activeItem === 'Existing Client')? <ExistingClient />: <NewUser />
   }
 
   renderPage = () => {
 
     return (
       <div>
-        <Button color='olive' size='small' basic fluid onClick={this.handleItemClick}>Existing User</Button>
+        <Button color='olive' size='small' basic fluid onClick={this.handleItemClick}>Existing Client</Button>
         <br/>
         <Button color='olive' size='small' basic fluid onClick={this.handleItemClick}>New Account</Button>
-      </div> 
+      </div>
     )
   }
 
