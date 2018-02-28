@@ -6,48 +6,21 @@
  */
 
 import React, { Component } from 'react'
-import { Button, Segment, Image, Container, Divider, Header } from 'semantic-ui-react'
-import BookSpace from '../BookSpace/BookSpace'
-import CheckOut from '../CheckOut/CheckOut'
+import { Segment, Container } from 'semantic-ui-react'
+import MainHeader from '../../components/MainHeader/MainHeader'
 import './Home.css'
 
 class Home extends Component {
 
-  constructor (props) {
-    super(props)
-
-    this.state = { activeItem: 'Book a space' }
-  }
-
-  handleItemClick = (e) => {
-    this.setState({ activeItem: e.target.innerText })
-  }
-
-  renderForm = (activeItem) => {
-    return (activeItem === 'Book a space')? <BookSpace />: <CheckOut />
-  }
-
   render  = () => {
-    const { activeItem } = this.state
+    const { children } = this.props
 
     return (
-      <div className='home-page'>
+      <div>
         <Segment size='massive' basic>
           <Container>
-            <Image as='img' src='/furonto-logo.png' size='small' centered/>
-            <Divider />
-            <Header as='h6' color='olive' textAlign='center'>Manage your coworking space<br/>hassle-free.</Header>
-            <Button.Group size='large' widths={2}>
-              <Button basic color='grey' positive={(activeItem === 'Book a space')} onClick={this.handleItemClick}>Book a space</Button>
-              <Button.Or/>
-              <Button basic color='grey' positive={(activeItem === 'Check out')} onClick={this.handleItemClick}>Check out</Button>
-            </Button.Group>
-
-            <Segment basic clearing>
-              {
-                this.renderForm(activeItem)
-              }
-            </Segment>
+            <MainHeader />
+            { children }
           </Container>
         </Segment>
       </div>

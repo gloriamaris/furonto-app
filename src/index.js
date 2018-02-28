@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './pages/App'
 import registerServiceWorker from './registerServiceWorker'
-import 'semantic-ui-css/semantic.min.css';
+import 'semantic-ui-css/semantic.min.css'
+import AppRoutes from './pages/AppRoutes'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<AppRoutes/>, document.getElementById('root'))
 registerServiceWorker()

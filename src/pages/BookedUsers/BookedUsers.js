@@ -6,7 +6,7 @@
  */
 
 import React, { Component } from 'react'
-import { Button, Card, Header, Divider, Label, Input } from 'semantic-ui-react'
+import { Button, Header, Divider, Input } from 'semantic-ui-react'
 import './BookedUsers.css'
 
 class BookedUsers extends Component {
@@ -66,40 +66,8 @@ class BookedUsers extends Component {
         <Header as='h4' textAlign='center'>{ membershipType } Memberships</Header>
         <Divider />
         <Input fluid placeholder='Search for a name' icon='search'/>
-        <br />
-        <br />
+        <Button basic color='green' size='tiny' fluid>Check out</Button>
 
-        <Card.Group stackable>
-          {
-            shortTerms.map((item, key) => {
-              return (
-                <Card color='orange' key={key}>
-                  <Card.Content>
-                    <Card.Header>
-                      { item.name }
-                    </Card.Header>
-                    <Card.Meta>
-                      <Label color={(item.type === 'Hourly')? 'olive': 'teal'} horizontal>{ item.type }</Label>
-                    </Card.Meta>
-                  </Card.Content>
-                  <Card.Content>
-                    <Card.Description>
-                      <strong>Check in:</strong> { this.getDate(item.checkIn) }
-                      <br/> <strong>Check out:</strong> { this.getDate(item.checkOut) }
-                      <br/>
-                      {
-                        (this.isHoursExceeded(item.checkOut))? <span className='text-danger'><em>Hours exceeded!</em></span>: ''
-                      }
-                    </Card.Description>
-                  </Card.Content>
-                  <Card.Content extra>
-                    <Button basic color='green' size='tiny' fluid>Check out</Button>
-                  </Card.Content>
-                </Card>
-              )
-            })
-          }
-        </Card.Group>
       </div>
     )
 

@@ -1,0 +1,16 @@
+.mt-1 {
+	margin-top: 15px;
+}
+
+.as-link {
+	color: rgba(0,0,0,.6) !important;
+  font-size: .85714286rem;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}

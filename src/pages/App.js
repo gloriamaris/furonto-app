@@ -6,13 +6,14 @@
  */
 
 import React, { Component } from 'react'
-import Home from './Home/Home'
 
 class App extends Component {
   render = () => {
+    const { children } = this.props
+
     return (
       <div>
-        <Home></Home>
+        { children }
       </div>
     )
   }

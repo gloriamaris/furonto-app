@@ -7,8 +7,8 @@
 
 import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react'
-import ExistingClient from '../ExistingClient/ExistingClient'
-import NewUser from '../NewUser/NewUser'
+import Login from '../Login/Login'
+import Register from '../Register/Register'
 
 import './BookSpace.css'
 
@@ -30,7 +30,7 @@ class BookSpace extends Component {
       return this.renderPage()
     }
 
-    return (activeItem === 'Existing Client')? <ExistingClient />: <NewUser />
+    return (activeItem === 'Existing Client')? <Login />: <Register />
   }
 
   renderPage = () => {
